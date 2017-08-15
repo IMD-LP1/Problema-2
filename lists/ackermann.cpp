@@ -8,7 +8,7 @@ int func_ackermann (int m, int n) {
 		return	(n += 1) ;	
 	}
 	else if (m > 0 && n == 0) {
-		return	func_ackermann(m-1,n) ;
+		return	func_ackermann(m-1,1) ;
 	}
 	else {
 		return 	func_ackermann(m-1,func_ackermann(m,n-1)) ;
