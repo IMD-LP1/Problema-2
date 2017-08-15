@@ -1,6 +1,7 @@
+/**	@file fatorialCauda.cpp */
+/** @Question */
 #include <iostream>
 using namespace std;
-
 
 int fatorial( int n);
 int fatorialIter ( int n, int cont);
@@ -11,13 +12,9 @@ int main()
     cout << "Digite o valor de n: \n";
     cin >> n;
 
-
-
-
     cout << "Fatorial (" << n << ")" << " = ";
     cout << "fatorialIter (" << n << "," << 1 << ")" << endl;
     cout << "= " << fatorial(n) << endl;
-
 
 }
 

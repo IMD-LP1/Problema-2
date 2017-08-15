@@ -8,3 +8,20 @@
 * [Fernando Rodrigues Maciel](https://github.com/nandomaciel)
 * [Gabriel Queiroz de Almeida Pereira](https://github.com/gabrielqap)
 * [Thina Micaelli da Silva](https://github.com/thinamicaelli)
+
+## Questões:
+
+* 1 *OK*
+* 2 *OK*
+* 3 *OK*
+* 4 *-*
+* 5 *-*
+* 6 *-*
+* 7 *-*
+* 8 *OK*
+* 9 *Ok*
+* 10 *-*
+* 11 *-*
+* 12 *-*
+* 13 *-*
+* 14 *-*

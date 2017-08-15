@@ -1,45 +1,61 @@
+/**
+ *  @file ackermann.cpp
+ *	@program Calcula a função de Ackermann
+ */
 #include <iostream>
-using std::cout ;
-using std::cin ;
-using std::endl ;
+using std::cin;
+using std::cout;
+using std::endl;
 
-int func_ackermann (int m, int n) {
-	if (m == 0) {
-		return	(n += 1) ;	
-	}
-	else if (m > 0 && n == 0) {
-		return	func_ackermann(m-1,n) ;
-	}
-	else {
-		return 	func_ackermann(m-1,func_ackermann(m,n-1)) ;
-	}
+#include <cctype>
 
+/**
+ *	@brief 		Função de Ackemann recursiva
+ *	@details	Função de Ackermann recursivamente.
+ *	@param 		m inteiro.
+ * 	@param 		n inteiro
+ */
+int ackermann(int m, int n) {
+	
+	if(m == 0) {
+		return n + 1;
+	} else if(m > 0 and n == 0) {
+		return ackermann(m - 1, 1);
+	} else if(m > 0 and n > 0) {
+		return ackermann(m - 1, ackermann(m, n - 1)); 
+	} else {
+		cout << "Erro, numero negativo!" << endl;
+		exit(EXIT_FAILURE);
+	}
+	
 }
 
-int main () {
+/**
+ * @brief Função principal do programa
+ */
+int main() {
 	
-	char controle('s') ;	
-	int m , n ;	
+	int m(0), n(0);
+	char opcao;
 
+	// leitura dos parametros da Funcao de Ackermann
+	do {
+		cout << "Função de Ackermann A(m,n)" << endl;
+		cout << "Informe o valor de m: ";
+		cin >> m;
+		cout << "Informe o valor de n: ";
+		cin >> n;
 
-	while (controle != 'n') {
-			
-		cout << "Função de Ackermann A(m,n)" << endl ;
-		cout << "Informe o valor de m: " ;
-		cin >> m ;
-		cout << "Informe o valor de n: " ;
-		cin >> n ;
-	
-		cout << "A(" << m <<", " << n << ") = " << func_ackermann(m,n) << endl ;
-		cout << "Continuar (s/n)? ";
-		cin >> controle ;		
-		while ( controle != 's' && controle != 'n') {
+		// calculo e impressao dos resultados da Funcao de Ackermann
+		cout << "A(" << m << ", " << n << ") = " << ackermann(m,n) << endl;
+
+		
+		do {
 			cout << "Continuar (s/n)? ";
-			cin >> controle ;		
-		}			
-	
-	}	
+			cin >> opcao;
+			opcao = toupper(opcao);
+		} while (opcao != 'S' and opcao != 'N');
 
-	return 0 ;
+	} while (opcao != 'N');
+
 }
-
