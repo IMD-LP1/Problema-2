@@ -1,31 +1,29 @@
+/**	@file fatorialBool.cpp */
+/** @Question 6 */
 #include <iostream>
 #include <string>
+#include <cctype>
 using namespace std;
 
 
 int fatorial(bool x, string fat, int n) {
-    if (x){
-        if(n == 0) {
-            cout << fat << "1" << endl;
-            return 1;
-        } else {
-            fat += std::to_string(n) + " * ";
-            cout << fat << "fatorial(" << n - 1 << ")" << endl;
-            return n * fatorial(true,fat, n - 1);
-        }
-    }
-    else {
-        if(n == 1) {
-		return n;
+	if(x) {
+		if(n == 0) {
+			cout << fat << "1" << endl;
+			return 1;
+		} else {
+			fat += std::to_string(n) + " * ";
+			cout << fat << "fatorial(" << n - 1 << ")" << endl;
+			return n * fatorial(true,fat, n - 1);
+		}
 	} else {
-
+		if(n == 1) {
+			return n;
+		} else {
 		return n * fatorial(x,fat,n - 1);
+		}
 	}
 }
-}
-
-
-
 
 int main(int argc, char * argv[]) {
 
@@ -37,6 +35,7 @@ int main(int argc, char * argv[]) {
 		cin >> n;
 		cout << "Modo verboso (s/n)? ";
 		cin >> opcao;
+		opcao = toupper(opcao);
 		if(opcao == "S") {
             x = true;
 			cout << "Fatorial(" << n << ") = \n";
@@ -45,7 +44,7 @@ int main(int argc, char * argv[]) {
 		} else if(opcao == "N") {
             x = false;
 			cout << "Fatorial(" << n << ") = " << fatorial(x,opcao,n) << "\n";
-			//fatorial(x,opcao,n);
+			//fatorial(x, opcao, n);
 		} else {
 			cout << "Erro!" << endl;
 			exit(EXIT_FAILURE);
