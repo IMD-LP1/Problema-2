@@ -1,11 +1,14 @@
+/**	@file fatorial_verboso.cpp */
+/** @Question 4 */
 #include <iostream>
+using std::cout;
+using std::cin;
+using std::endl;
+
 #include <cstdlib>
 #include <string>
 #include <cctype>
 
-using std::cout;
-using std::cin;
-using std::endl;
 using std::string;
 using std::stoi;
 
