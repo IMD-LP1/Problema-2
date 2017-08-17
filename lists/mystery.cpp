@@ -6,4 +6,4 @@ T add(T lhs, T 	rhs)
 	return lhs(rhs); 
 }
 
-itn main(){}
+int main(){}
