@@ -1,7 +1,5 @@
-/**
- *  @file ackermann.cpp
- *	@program Calcula a função de Ackermann
- */
+/** @file ackermann.cpp	*/
+/** @@question 8		*/
 #include <iostream>
 using std::cin;
 using std::cout;

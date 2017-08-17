@@ -1,5 +1,5 @@
 /**	@file fatorialCauda.cpp */
-/** @Question 10 */
+/** @Question 10 			*/
 #include <iostream>
 using std::cout ;
 using std::endl ;
@@ -7,32 +7,37 @@ using std::cin ;
 
 
 
-void fibDupla (int n , int& a , int& b) {
+void fibDupla (int n, int& a, int& b) {
 	
-	if (n < 0) {
+	int aux;
+	
+	if(n < 0) {
 		cout << "O numero precisa ser maior do que zero." << endl ;
-		exit (1) ;
-	}
-	else if (n == 1) {
-		cout << b << endl ; ;
-		return  ;
-	}
-	else  {
-		int aux(a+b) ;
-		//cout << aux << endl ;
-		fibDupla(n-1, b , aux) ;
+		exit(1);
+	 } else if(n == 0) {
+	 	b = a;
+	} else {
+		aux = a;
+		a = b;
+		b = a + aux;
+		
+		fibDupla(n - 1,a ,b) ;
 	}
 }
 
 
 int main() {
-	int n , a(0) , b(1) ;
 
-	cout << "Digite um numero " ;
-	cin >> n ;
+	int n ,a ,b;
+	
+	a = 0;
+	b = 1;
 
-	cout << n << " Fibonacci: " ;
-	fibDupla (n,a,b) ;
+	cout << "Digite um numero ";
+	cin >> n;
+
+	fibDupla (n, a, b);
+	cout <<"fib(" << n <<") = " << b << endl;
 
 	return 0 ;
 

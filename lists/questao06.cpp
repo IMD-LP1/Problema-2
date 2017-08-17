@@ -1,4 +1,4 @@
-/**	@file fatorialBool.cpp */
+/**	@file questao06.cpp */
 /** @Question 6 */
 #include <iostream>
 #include <string>

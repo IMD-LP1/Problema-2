@@ -1,7 +1,5 @@
-/**
- *  @file par.cpp
- *	@question 9
- */
+/**	@file par.cpp	*/
+/**	@question 9 	*/
 #include <iostream>
 using std::cout;
 using std::endl;
