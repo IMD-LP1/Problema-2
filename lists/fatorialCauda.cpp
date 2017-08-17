@@ -1,5 +1,5 @@
 /**	@file fatorialCauda.cpp */
-/** @Question */
+/** @Question 7a */
 #include <iostream>
 using namespace std;
 
@@ -18,8 +18,7 @@ int main()
 
 }
 
-int fatorialIter ( int n, int cont)
-{
+int fatorialIter ( int n, int cont) {
 
     while (n != 0){
         cout << "fatorialIter (" << n-1 << ", " << n << " * " << cont << ")" << endl;
@@ -29,7 +28,6 @@ int fatorialIter ( int n, int cont)
    
        return cont;
 }
-
 
 int fatorial( int n) {
 
