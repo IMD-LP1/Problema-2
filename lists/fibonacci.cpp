@@ -1,5 +1,5 @@
 
-/**	@file fatorialCauda.cpp
+/**	@file fibonacci.cpp
  *	@program Calcula a posiçao de fibonacci dada pelo usuario
  *	@questao 10
 */
