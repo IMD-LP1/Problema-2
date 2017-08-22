@@ -1,14 +1,12 @@
-/**
- *	@file fibonacci.cpp
+
+/**	@file fatorialCauda.cpp
  *	@program Calcula a posiçao de fibonacci dada pelo usuario
  *	@questao 10
 */
-
 #include <iostream>
 using std::cout ;
 using std::endl ;
 using std::cin ;
-
 
 /*
  *	@brief	funçao de fibonacci recursiva
@@ -17,8 +15,11 @@ using std::cin ;
  *  @param	b Valor da Posiçao n
 */
 void fibDupla (int n , int& a , int& b) {
+
 	
-	if (n < 0) {
+	int aux;
+	
+	if(n < 0) {
 		cout << "O numero precisa ser maior do que zero." << endl ;
 		exit (1) ;
 	}
@@ -41,13 +42,14 @@ void fibDupla (int n , int& a , int& b) {
  *	@brief Funçao principal
 */
 int main() {
-	int n , a = 0 , b = 1 ;
-
-	cout << "Digite um numero " ;
-	cin >> n ;
-
-	fibDupla(n,a,b) ;
-	cout << "fib(" << n << ") = " << b << endl ;;
+	int n ,a ,b;
 	
-	
+	a = 0;
+	b = 1;
+
+	cout << "Digite um numero ";
+	cin >> n;
+
+	fibDupla (n, a, b);
+	cout <<"fib(" << n <<") = " << b << endl;
 }
