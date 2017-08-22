@@ -5,7 +5,18 @@ using std::cin;
 using std::cout;
 using std::endl;
 
-#include <cctype>
+
+int func_ackermann (int m, int n) {
+	if (m == 0) {
+		return	(n += 1) ;	
+	}
+	else if (m > 0 && n == 0) {
+		return	func_ackermann(m-1,1) ;
+	}
+	else {
+		return 	func_ackermann(m-1,func_ackermann(m,n-1)) ;
+	}
+}
 
 /**
  *	@brief 		Função de Ackemann recursiva
@@ -13,7 +24,7 @@ using std::endl;
  *	@param 		m inteiro.
  * 	@param 		n inteiro
  */
-int ackermann(int m, int n) {
+int ackermann (int m, int n) {
 	
 	if(m == 0) {
 		return n + 1;
